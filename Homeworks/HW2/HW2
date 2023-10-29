@@ -1,0 +1,188 @@
+/**
+ * 
+ */
+
+/**
+ * @author MJ
+ *
+ */
+public class HW2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		Course course1 = new Course("MIST352", "Businsess Application Programming","MJ Ahmad");
+		Course course2 = new Course("CS101", "Introd. to Computer Science","Sarah Jones");
+		Student student1 = new Student("Ashley Jaber");
+		Student student2 = new Student("Ali June");
+
+		//Keep If statements the way they are.
+		if (course1.enrollStudent()) 
+			{ public Course(String courseCode, String courseTitle, String instructorName) {
+        this.courseCode = courseCode;
+        this.courseTitle = courseTitle;
+        this.instructorName = instructorName;
+        this.maximumCapacity = 30;
+        this.currentEnrollment = 29;
+
+			}
+
+		else
+			{ // MIST352 Course
+        Course mist352 = new Course("MIST352", "Software Engineering", "Professor Johnson");
+
+			}
+
+		if ( // Enroll Ashley Jaber in MIST352
+        if (mist352.enrollStudent()) {
+            System.out.println("Enrolling Ashley Jaber in MIST352 successful");
+        } else {
+            // Print current enrollment for MIST352
+        System.out.println("Current enrollment for MIST352: " + mist352.getCurrentEnrollment());
+
+        }
+        
+        } else { // Add grades for MIST352
+        double mist352Grade1 = 80;
+        double mist352Grade2 = 85;
+        double mist352Grade3 = 75;
+        
+            
+			}
+
+		else
+			{
+        // Calculate average grade for MIST352
+        double mist352AverageGrade = (mist352Grade1 + mist352Grade2 + mist352Grade3) / 3;
+        System.out.println("Average grade for MIST352: " + mist352AverageGrade);
+
+			}
+
+
+
+		 // Enroll Ali June in MIST352
+        if (mist352.enrollStudent()) {
+            System.out.println("Enrolling Ali June in MIST352 successful");
+        } else {
+            System.out.println("Enrolling Ali June in MIST352 not successful");
+        }
+			}
+
+		else
+			{  // Print current enrollment for MIST352 after enrolling Ali June
+        System.out.println("Current enrollment for MIST352: " + mist352.getCurrentEnrollment());
+
+        // Add grades for MIST352 for Ali June
+        double mist352AliGrade1 = 88;
+        double mist352AliGrade2 = 92;
+        double mist352AliGrade3 = 79;
+			
+        } else {// Calculate average grade for MIST352 for Ali June
+        double mist352AliAverageGrade = (mist352AliGrade1 + mist352AliGrade2 + mist352AliGrade3) / 3;
+        System.out.println("Average grade for Ali June in MIST352: " + mist352AliAverageGrade);
+
+        // CS101 Course
+        Course cs101 = new Course("CS101", "Introduction to Computer Science", "Professor Smith");
+
+        } else {
+             // Enroll Ashley Jaber in CS101
+        if (cs101.enrollStudent()) {
+            System.out.println("Enrolling Ashley Jaber in CS101 successful");
+        } else {
+            System.out.println("Enrolling Ashley Jaber in CS101 not successful");
+        }
+             
+        }
+
+			}
+
+		if (  // Print current enrollment for CS101
+        System.out.println("Current enrollment for CS101: " + cs101.getCurrentEnrollment());
+
+
+			}
+		else
+			{   // Add grades for CS101
+        double cs101Grade1 = 85;
+        double cs101Grade2 = 90;
+        double cs101Grade3 = 78;
+
+        // Calculate average grade for CS101
+        double cs101AverageGrade = (cs101Grade1 + cs101Grade2 + cs101Grade3) / 3;
+        System.out.println("Average grade for CS101: " + cs101AverageGrade);
+    }
+
+
+			}
+		//Add your code below for question 8
+		
+		
+		 Course mist352 = new Course("MIST352", "Database Management", "Dr. Johnson");
+
+    Course cs101 = new Course("CS101", "Introduction to Computer Science", "Prof. Smith");
+
+
+
+    // Enroll Ashley Jaber in MIST352
+
+    if (mist352.enrollStudent()) {
+
+        System.out.println("Enrolling Ashley Jaber in MIST352 successful");
+
+    }
+
+    mist352.setScore1(85.0);
+
+    mist352.setScore2(78.0);
+
+    mist352.setScore3(90.0);
+
+
+
+    // Enroll Ashley Jaber in CS101
+
+    if (cs101.enrollStudent()) {
+
+        System.out.println("Enrolling Ashley Jaber in CS101 successful");
+
+    }
+
+    cs101.setScore1(88.0);
+
+    cs101.setScore2(75.0);
+
+    cs101.setScore3(94.0);
+
+
+
+    // Compare Ashley's GPA in MIST352 and CS101
+
+    double mist352Average = (mist352.getScore1() + mist352.getScore2() + mist352.getScore3()) / 3.0;
+
+    double cs101Average = (cs101.getScore1() + cs101.getScore2() + cs101.getScore3()) / 3.0;
+
+
+
+    System.out.printf("GPA in MIST352: %.6f%n", mist352Average);
+
+    System.out.printf("GPA in CS101: %.6f%n", cs101Average);
+
+
+
+    if (mist352Average > cs101Average) {
+
+        System.out.println("Ashley's GPA in MIST352 is greater than in CS101.");
+
+    } else if (mist352Average < cs101Average) {
+
+        System.out.println("Ashley's GPA in CS101 is greater than in MIST352.");
+
+    } else {
+
+        System.out.println("Ashley's GPA in MIST352 and CS101 is the same.");
+
+	}
+
+}
