@@ -4,6 +4,12 @@
  * @author MJ
  *
  */
+/**
+ * * Course: MIST 352 001
+*HW4
+*Chat GPT: NO
+
+ */
 public class Csv2Arff {
 	private String csvFileLocation;
 	

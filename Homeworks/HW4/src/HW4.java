@@ -13,6 +13,13 @@ import java.util.Scanner;
  * @author MJ
  *
  */
+/**Name: Braelynne Sandreth
+* Course: MIST 352 001
+*HW4
+*Chat GPT: YES
+*Promt: Copy and pasted the code and then the instructions and told it to code it. And if i got errors i asked it why it was wrong and tried to learn from it.
+*
+
 public class HW4 {
 
 	/**
