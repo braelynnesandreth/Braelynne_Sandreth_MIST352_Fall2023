@@ -30,7 +30,7 @@ public class Csv2Arff {
         String fileName = parts[parts.length - 1];
         String arffFileName = "YourFirstName_YourLastName_" + fileName.replace(".csv", ".arff");
         System.out.println("Converted " + theLocation + " to " + arffFileName);
-        System.out.println("Converted " + theLocation + " to " + arffFileName);
+        
 	}
 	
 	

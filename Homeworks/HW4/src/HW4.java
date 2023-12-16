@@ -41,45 +41,45 @@ public class HW4 {
 	 *  This method simply prints out the content of any given String array
 	 * @param array: The array to print
 	 */
-	public static void PrintArray(Object csvFileNames) {
-        for (String element : csvFileNames) {
-            System.out.print(element + " ");
-        }
-        System.out.println();
-    }
-
-    public static void retrieveCellAndDisplay(String fileName, int columnNumber, int rowNumber) {
-    	System.out.println("Step i: CSV Files:");
-        PrintArray(findCSVFileNames(null));
-        String directory = "src/Data/";
-        Object csvFileNames;
-		for (int i = 0; i < csvFileNames.length; i++) {
-            csvFileNames[i] = directory + csvFileNames[i];
-        }
-
-      
-        System.out.println("\nStep iii: CSV Files with Directory:");
-        PrintArray(csvFileNames);
+	public static void PrintArray(String[] array) {
+	    for (String element : array) {
+	        System.out.print(element + " ");
+	    }
+	    System.out.println();
+	}
 
 
-        for (String csvFileName : csvFileNames) {
-            Csv2Arff converter = new Csv2Arff(csvFileName);
-            converter.Convert2Arff(csvFileName);
-        }
+    
+	public static void retrieveCellAndDisplay(String fileName, int columnNumber, int rowNumber) {
+	    System.out.println("Step i: CSV Files:");
+	    PrintArray(findCSVFileNames(null));
+	    String directory = "src/Data/";
+	    String[] csvFileNames = findCSVFileNames(new File(directory)); // Initialize csvFileNames as a String array
+	    for (int i = 0; i < csvFileNames.length; i++) {
+	        csvFileNames[i] = directory + csvFileNames[i];
+	    }
 
-        try (Scanner scanner = new Scanner(System.in)) {
-            System.out.print("\nEnter the name of the file to look in: ");
-            String fileNameToLookIn = scanner.nextLine();
+	    System.out.println("\nStep iii: CSV Files with Directory:");
+	    PrintArray(csvFileNames);
 
-            System.out.print("Enter the column number: ");
-            int columnNumber1 = scanner.nextInt();
+	    for (String csvFileName : csvFileNames) {
+	        Csv2Arff converter = new Csv2Arff(csvFileName);
+	        converter.Convert2Arff(csvFileName);
+	    }
 
-            System.out.print("Enter the row number: ");
-            int rowNumber1 = scanner.nextInt();
-            retrieveCellAndDisplay(fileNameToLookIn, columnNumber1, rowNumber1);
-        }
-    }
-	
+	    try (Scanner scanner = new Scanner(System.in)) {
+	        System.out.print("\nEnter the name of the file to look in: ");
+	        String fileNameToLookIn = scanner.nextLine();
+
+	        System.out.print("Enter the column number: ");
+	        int columnNumber1 = scanner.nextInt();
+
+	        System.out.print("Enter the row number: ");
+	        int rowNumber1 = scanner.nextInt();
+	        retrieveCellAndDisplay(fileNameToLookIn, columnNumber1, rowNumber1);
+	    }
+	}
+
 
 	/**
 	 * Keep as is.
